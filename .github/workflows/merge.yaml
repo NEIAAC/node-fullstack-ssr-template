@@ -15,4 +15,8 @@ jobs:
           node-version: lts/*
       - name: Install commitlint and config-conventional
         run: npm install @commitlint/cli @commitlint/config-conventional
-      - run: echo "${{ github.event.pull_request.title }}" | npx commitlint
+      - name: Setup commitlint config
+        run: |
+          echo '{ "extends": ["@commitlint/config-conventional"] }' > commitlint.config.json
+      - name: Validate PR title
+        run: echo "${{ github.event.pull_request.title }}" | npx commitlint
