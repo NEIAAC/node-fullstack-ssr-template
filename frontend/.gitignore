@@ -1,0 +1,39 @@
+# IDE
+.idea/
+.vscode/
+xcuserdata/
+
+# Environment
+*.env*
+*.pem*
+|.pem.example
+!.env.example
+
+# Dependencies
+node_modules
+
+# Cache
+.DS_Store
+vite.config.ts.*
+
+# Logs
+logs/
+*.log
+
+# Build
+out/
+output/
+build/
+dist/
+
+# Testing
+reports/
+coverage/
+test-results/
+playwright-report/
+playwright/.cache/
+lib-cov/
+blob-report/
+
+# Miscellaneous
+*.tsbuildinfo

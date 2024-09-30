@@ -1,0 +1,16 @@
+services:
+  website:
+    container_name: $WEBSITE_CONTAINER_NAME
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+      args:
+        - PORT=${WEBSITE_PORT}
+    ports:
+      - ${WEBSITE_PORT}:${WEBSITE_PORT}
+    restart: unless-stopped
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://website:${WEBSITE_PORT}/health" ]
+      interval: 5s
+      timeout: 10s
+      retries: 6

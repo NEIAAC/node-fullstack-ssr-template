@@ -1,0 +1,42 @@
+services:
+  database:
+    container_name: $DB_CONTAINER_NAME
+    image: postgres:17
+    environment:
+      - POSTGRES_USER=$DB_USER
+      - POSTGRES_PASSWORD=$DB_PASSWORD
+      - POSTGRES_DB=$DB_NAME
+    ports:
+      - $DB_PORT:5432
+    restart: unless-stopped
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "sh -c 'pg_isready -U ${DB_USER} -d ${DB_NAME}'"
+        ]
+      interval: 5s
+      timeout: 10s
+      retries: 6
+    volumes:
+      - database:/var/lib/postgresql/data
+
+  api:
+    container_name: $API_CONTAINER_NAME
+    depends_on:
+      database:
+        condition: service_healthy
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    ports:
+      - $API_PORT:$API_PORT
+    restart: unless-stopped
+    healthcheck:
+      test: [ "CMD-SHELL", "curl -f http://api:$API_PORT/health" ]
+      interval: 5s
+      timeout: 10s
+      retries: 6
+
+volumes:
+  database:
