@@ -13,7 +13,6 @@ xcuserdata/
 node_modules
 
 # Cache
-.DS_Store
 vite.config.ts.*
 
 # Logs
@@ -21,6 +20,7 @@ logs/
 *.log
 
 # Build
+*.tsbuildinfo
 out/
 output/
 build/
@@ -36,4 +36,4 @@ lib-cov/
 blob-report/
 
 # Miscellaneous
-*.tsbuildinfo
+.DS_Store

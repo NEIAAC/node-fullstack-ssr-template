@@ -12,14 +12,12 @@ xcuserdata/
 # Dependencies
 node_modules
 
-# Cache
-.DS_Store
-
 # Logs
 logs/
 *.log
 
 # Build
+*.tsbuildinfo
 out/
 output/
 build/
@@ -34,4 +32,4 @@ lib-cov/
 blob-report/
 
 # Miscellaneous
-*.tsbuildinfo
+.DS_Store

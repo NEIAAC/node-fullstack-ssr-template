@@ -1,2 +1,10 @@
+# IDE
+.idea/
+.vscode/
+xcuserdata/
+
 # Dependencies
 node_modules
+
+# Miscellaneous
+.DS_Store
