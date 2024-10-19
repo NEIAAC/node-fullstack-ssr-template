@@ -9,10 +9,10 @@ permissions:
   pull-requests: write
 
 jobs:
-  node:
+  metadata:
     runs-on: ubuntu-latest
     steps:
-      - uses: googleapis/release-please-action@v4
+      - name: Update project metadata and release pull request
+        uses: googleapis/release-please-action@v4
         with:
-          # Creates a tagged release in github, updates CHANGELOG.md and bumps package.json version
           release-type: node
