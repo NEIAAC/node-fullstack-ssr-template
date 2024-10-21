@@ -12,7 +12,7 @@ jobs:
   metadata:
     runs-on: ubuntu-latest
     steps:
-      - name: Update project metadata and release pull request
+      - name: Update project metadata and the release pull request
         uses: googleapis/release-please-action@v4
         with:
           release-type: node
