@@ -1,0 +1,13 @@
+name: deploy
+
+on:
+  workflow_dispatch:
+  workflow_call:
+
+jobs:
+  ssh:
+    runs-on: macos-latest
+
+    steps:
+      - name: SSH to the deployment server
+        run: echo "Automated deployment not configured!"

@@ -1,0 +1,13 @@
+output: false
+
+dpre-commit:
+  paralell: true
+  commands:
+    backend:
+      root: "backend"
+      run: "npm run check"
+      stage_fixed: true
+    frontend:
+      root: "frontend"
+      run: "npm run check"
+      stage_fixed: true

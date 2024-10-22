@@ -11,8 +11,15 @@ permissions:
 jobs:
   metadata:
     runs-on: ubuntu-latest
+    outputs:
+      release-created: ${{ steps.metadata.outputs.release_created }}
     steps:
       - name: Update project metadata and the release pull request
         uses: googleapis/release-please-action@v4
+        id: metadata
         with:
           release-type: node
+  deploy:
+    needs: [metadata]
+    if: ${{ needs.metadata.outputs.release-created}}
+    uses: ./.github/workflows/deploy.yaml
