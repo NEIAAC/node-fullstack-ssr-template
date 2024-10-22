@@ -3,10 +3,10 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"dev": "echo \"No development script specified!\" && exit 0",
-		"build": "echo \"No build script specified!\" && exit 0",
-		"start": "echo \"No start script specified!\" && exit 0",
-		"test": "echo \"No tests specified!\" && exit 0",
+		"dev": "echo 'No development script specified!'",
+		"build": "echo 'No build script specified!'",
+		"start": "echo 'No start script specified!'",
+		"test": "echo 'No tests specified!'",
 		"check": "biome check --write"
 	}
 }
