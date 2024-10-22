@@ -18,6 +18,22 @@ The base of this template focus on server side rendered (SSR) frontends, meaning
 
 - Clone the repository and open a terminal **inside** it.
 
+- Install the dependencies:
+
+    ```bash
+    npm i
+
+    # Note that when installing dependencies pre-commit hooks will also be installed.
+
+    # This means that commits will fail if they don't pass the lint/format checks.
+    ```
+
+- Inside either the `frontend` or `backend` directory, run the following commands to perform a lint/format check and auto fix all possible issues:
+
+    ```bash
+    npm run check
+    ```
+
 ### Backend 🗄️
 
 - Create a `.env` file inside the `frontend` directory based on the `.env.example` file.
@@ -27,11 +43,11 @@ The base of this template focus on server side rendered (SSR) frontends, meaning
     ```bash
     cd backend
 
+    docker compose up --force-recreate database
+
     # This service has a volume, meaning the database retains it's contents between rebuilds and restarts.
 
     # The --force-recreate flag will restart the container if it is already running!
-
-    docker compose up --force-recreate database
     ```
 
 - Start the API:
