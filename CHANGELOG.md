@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.0](https://github.com/NEIAAC/node-fullstack-ssr-template/compare/v1.0.0...v1.1.0) (2024-11-01)
+
+
+### Features
+
+* add correct type validation ([1ac59cd](https://github.com/NEIAAC/node-fullstack-ssr-template/commit/1ac59cdf78f6557941787d778ed498394470731c))
+
+
+### Bug Fixes
+
+* add lint example ignore ([eb67196](https://github.com/NEIAAC/node-fullstack-ssr-template/commit/eb6719645fa44c41d5dc91a7a17e63c754c3f4ac))
+
 ## 1.0.0 (2024-10-22)
 
 
