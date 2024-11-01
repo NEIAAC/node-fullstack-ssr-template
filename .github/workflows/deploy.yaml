@@ -6,7 +6,7 @@ on:
 
 jobs:
   ssh:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: SSH to the deployment server
