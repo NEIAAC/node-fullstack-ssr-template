@@ -1,6 +1,6 @@
 output: false
 
-dpre-commit:
+pre-commit:
   paralell: true
   commands:
     backend:
