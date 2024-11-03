@@ -36,7 +36,7 @@ The base of this template focus on server side rendered (SSR) frontends, meaning
 
 ### Backend 🗄️
 
-- Create a `.env` file inside the `frontend` directory based on the `.env.example` file.
+- Create a `.env` file inside the `backend` directory based on the `.env.example` file.
 
 - Start only the database from the docker compose file:
 
