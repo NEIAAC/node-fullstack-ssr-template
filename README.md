@@ -79,7 +79,8 @@ The base of this template focus on server side rendered (SSR) frontends, meaning
 
     # The --build flag will ensure the latest code is used for each container.
 
-    # All services are defined with the `restart: unless-stopped` compose flag, meaning they will restart any time they fail.
-    # This includes systems restarts, which will ensure the services are automatically available as soon as possible.
+    # All services are defined with the "restart: unless-stopped" compose flag.
+    # This means they will restart anytime they fail, including for systems restarts.
+    # Defining this flag ensures the services are automatically re-available as soon as possible.
     ```
 - Serve the port of each service using a reverse proxy.
