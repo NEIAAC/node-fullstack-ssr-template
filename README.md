@@ -45,7 +45,7 @@ The base of this template focus on server side rendered (SSR) frontends, meaning
 
     docker compose up --force-recreate database
 
-    # This service has a volume, meaning the database retains it's contents between rebuilds and restarts.
+    # This volume in this service ensures the database retains it's contents between rebuilds and restarts.
 
     # The --force-recreate flag will restart the container if it is already running!
     ```
