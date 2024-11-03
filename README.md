@@ -20,7 +20,7 @@ The base of this template focus on server side rendered (SSR) frontends, meaning
 
 - Install the dependencies:
 
-    ```bash
+    ```shell
     npm i
 
     # Note that when installing dependencies pre-commit hooks will also be installed.
@@ -30,7 +30,7 @@ The base of this template focus on server side rendered (SSR) frontends, meaning
 
 - Inside either the `frontend` or `backend` directory, run the following commands to perform a lint/format check and auto fix all possible issues:
 
-    ```bash
+    ```shell
     npm run check
     ```
 
@@ -40,7 +40,7 @@ The base of this template focus on server side rendered (SSR) frontends, meaning
 
 - Start only the database from the docker compose file:
 
-    ```bash
+    ```shell
     cd backend
 
     docker compose up --force-recreate database
@@ -52,7 +52,7 @@ The base of this template focus on server side rendered (SSR) frontends, meaning
 
 - Start the API:
 
-    ```bash
+    ```shell
     cd backend
     npm run dev
     ```
@@ -63,7 +63,7 @@ The base of this template focus on server side rendered (SSR) frontends, meaning
 
 - Start the website:
 
-    ```bash
+    ```shell
     cd frontend
     npm run dev
     ```
@@ -74,7 +74,7 @@ The base of this template focus on server side rendered (SSR) frontends, meaning
 
 - Deploy the entire stack in the **background** with the root utility script:
 
-    ```bash
+    ```shell
     npm run docker
 
     # The --build flag will ensure the latest code is used for each container.
