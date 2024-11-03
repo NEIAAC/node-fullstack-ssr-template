@@ -68,6 +68,22 @@ The base of this template focus on server side rendered (SSR) frontends, meaning
     npm run dev
     ```
 
+### Tooling 🧰
+
+- Biome is used as a linter and formatter:
+
+    ```shell
+    # In both the frontend and backend!
+    npm run check
+
+    # When installing dependencies, pre-commit hooks are added to lint and format automatically.
+    # If for some reason the hooks do not install correctly, do it manually:
+    npx lefthook install
+
+    # When using pre-commit hooks, git commands will fail if any files are checked with errors.
+    # Changed files must be added to the staged area and commited again to apply fixes.
+    ```
+
 ## Deployment 🚀
 
 - Setup the environment variables used in the development phase.
