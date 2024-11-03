@@ -76,6 +76,10 @@ The base of this template focus on server side rendered (SSR) frontends, meaning
 
     ```bash
     npm run docker
-    ```
 
-- All services are defined with the `restart: unless-stopped` compose flag, meaning they will restart any time they fail/crash, this includes systems restarts. What this essentially accomplishes is a hands-off management of the deployment since maintenance will be done automatically along with the system.
+    # The --build flag will ensure the latest code is used for each container.
+
+    # All services are defined with the `restart: unless-stopped` compose flag, meaning they will restart any time they fail.
+    # This includes systems restarts, which will ensure the services are automatically available as soon as possible.
+    ```
+- Serve the port of each service using a reverse proxy.
