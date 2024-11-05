@@ -4,9 +4,11 @@ This is a template repository for small scale fullstack projects, with a focus o
 
 The repository is a _monorepo_ but the project architecture is **not** a _monolith_, the API and frontend are different services and can even be further split into additional microservices, such as a separate auth service.
 
-The base of this template focus on server side rendered (SSR) frontends, meaning the frontend is served by a server instead of as a static file. To use this template for a static frontend, e.g Vite only, simply remove the `docker-compose.override.yaml`/`docker-compose.yaml` at the root and the `Dockerfile`/`docker-compose.yaml` in the `frontend` directory. The docker script in the root `package.json` also becomes useless so it can be removed too.
-
 **Note that this is a very initial stage of the template, as we are still migrating some of our best project architecture practices from internal projects to this repository. Currently this template should be used for the file structure, base workflows and docker utilities it provides.**
+
+### Notice 🚨
+
+The base of this template focus on server side rendered (SSR) frontends, meaning the frontend is served by a server instead of as a static file. To use this template for a static frontend builder, e.g Vite only, simply remove the `docker-compose.override.yaml`/`docker-compose.yaml` at the root and the `Dockerfile`/`docker-compose.yaml` in the `frontend` directory. The docker script in the root `package.json` also becomes useless so it can be removed too.
 
 ## Requirements 📋
 
